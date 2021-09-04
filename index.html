@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <h3 style="color: white;" class="board">Scoreboard</h3>
+    <div class="score_board">
+    <div>Player1</div>
+    <div>Player2</div>
+
+    <div id="p1">0</div>
+    <div id="p2">0</div>
+    </div>
+  <div class="tac" align="center">
+    <h1 style ="color: white" class="t">Tic Tac Toe</h1>
+    <h2 style="color: white">Player 1 is X = Player 2 is O </h2><br>
+    <div id="t1" style="color: white;"></div>
+    <div id="t2" style="color: white;"></div>
+    <div class="block">
+      <div class="cell" id="cell1" onclick="fill(this)"></div>
+      <div class="cell" id="cell2" onclick="fill(this)"></div>
+      <div class="cell" id="cell3" onclick="fill(this)"></div>
+      <div class="cell" id="cell4" onclick="fill(this)"></div>
+      <div class="cell" id="cell5" onclick="fill(this)"></div>
+      <div class="cell" id="cell6" onclick="fill(this)"></div>
+      <div class="cell" id="cell7" onclick="fill(this)"></div>
+      <div class="cell" id="cell8" onclick="fill(this)"></div>
+      <div class="cell" id="cell9" onclick="fill(this)"></div>
+      </div>
+      <div class="bposition">
+      <button onclick="reset()" class="btn">RESET</button>
+      <button onclick="reset1()" class="btn2">NEW GAME</button>
+      </div>
+      </div>
+      <script src="main.js"></script>
+  </body>
+</html>
