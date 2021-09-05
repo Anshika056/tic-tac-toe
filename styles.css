@@ -56,6 +56,12 @@
     background-color: grey;
     color: black;
   }
+  .btn:hover{
+ background-color: ghostwhite;
+  }
+  .btn2:hover{
+    background-color: ghostwhite;
+     }
   .btn2{
     cursor: pointer;
     background: transparent;

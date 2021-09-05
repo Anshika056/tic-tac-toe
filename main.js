@@ -47,18 +47,22 @@ function fill(control){
 
 function player(){ 
     if(start % 2 !== 0){
-        document.getElementById("t1").innerHTML = "Player 1's Turn !!";
+         currentPlayer = "Player 1";
         start++;
     } 
     else if( start % 2 == 0){
-        document.getElementById("t2").innerHTML = "Player 2's Turn !!";
+       currentPlayer = "Player 2";
         start++;
     }
+    document.getElementById("t1").innerHTML = currentPlayer + "'s turn!!";
 }
-        function getdata(get){ 
-            return document.getElementById(get).innerHTML;
-            }
-    //checkCondition function will check values that whether they are same or not ,if same then return true.
+
+function getdata(get)
+{ 
+ return document.getElementById(get).innerHTML;
+ }
+    
+ //checkCondition function will check values that whether they are same or not ,if same then return true.
 function checkCondition(cell1,cell2,cell3){
     if(getdata(cell1)!="" && getdata(cell2)!="" && getdata(cell3)!="" && getdata(cell1)==getdata(cell2) && getdata(cell2)==getdata(cell3) && getdata(cell3)==getdata(cell1)) 
     {
@@ -89,7 +93,9 @@ function reset(){
     for (let i = 1; i <= 9; i++)
      {
         document.getElementById("cell" + i).innerHTML="";
-    } count=1;
+    } 
+    document.getElementById('t1').innerHTML="";
+    count=1;
 }
 
 function reset1()
@@ -98,8 +104,14 @@ function reset1()
         document.getElementById('cell' +i ).innerHTML="";
         document.getElementById('p1').innerHTML="0";
         document.getElementById('p2').innerHTML="0";
+        document.getElementById('t1').innerHTML="";
     } count = 1 ;
 }
 
-
+function demo() {
+    let n1=document.getElementById("p1").value ;
+    localStorage.setItem("player1",n1);
+    let n2=document.getElementById("p2").value  ;
+    localStorage.setItem("player2",n2);
+}
  
