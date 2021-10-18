@@ -1,111 +1,112 @@
 *{
-    font-family: sans-serif;
-    text-align: center;
-    background-image: url('tic.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .board{
-     margin-right: 1200px;
-  }
-  .t{
-    margin-top: 10px;
-  }
-  .block {
-    background: black;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-auto-rows: auto auto auto;
-    grid-gap: 5px;
-    width: 350px;
-    margin-top: 20px;
-    margin-left: 400px;
-  }
-  .block > div {
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    height: 150px;
-    width: 150px;
-    font-size: 220px;
-    }
-  .tac{
-    margin-right: 100px;
-  }
-  .cell{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-
-    
-  }
-  .btn{
-    cursor: pointer;
-    background: transparent;
-    outline: darkgray;
-    position: relative;
-    font-size: 16px;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px; 
-    border-radius: 20px;
-    background-color: grey;
-    color: black;
-  }
-  .btn:hover{
- background-color: ghostwhite;
-  }
-  .btn2:hover{
-    background-color: ghostwhite;
-     }
-  .btn2{
-    cursor: pointer;
-    background: transparent;
-    outline: rgb(94, 89, 89);
-    position: relative;
-    font-size: 16px;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px; 
-    border-radius: 20px;
-    background-color: grey;
-    color: black;
-  }
-  .bposition{
-    padding-top: 20px;
-    padding-left: 40px;
-  }
-.score_board{
+  font-family: sans-serif;
+  text-align: center;
+  background-image: url('tic.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+}
+.board{
+   margin-right: 1200px;
+}
+.t{
+  margin-top: 10px;
+}
+.block {
+  background: black;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  grid-gap: 3px;
-  width: 200px;
-  background-color: black;
+  grid-template-columns: auto auto auto;
+  grid-auto-rows: auto auto auto;
+  grid-gap: 5px;
+  width: 350px;
+  margin-top: 20px;
+  margin-left: 400px;
+
+}
+
+.block > div {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+  font-size: 220px;
+  }
+  
+.tac{
+  margin-right: 100px;
+}
+.cell{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.btn{
+  cursor: pointer;
+  background: transparent;
+  outline: darkgray;
+  position: relative;
+  font-size: 16px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  border-radius: 20px;
+  background-color: grey;
+  color: black;
+}
+.btn:hover{
+background-color: ghostwhite;
+}
+.btn2:hover{
+  background-color: ghostwhite;
+   }
+.btn2{
+  cursor: pointer;
+  background: transparent;
+  outline: rgb(94, 89, 89);
+  position: relative;
+  font-size: 16px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  border-radius: 20px;
+  background-color: grey;
+  color: black;
+}
+.bposition{
+  padding-top: 20px;
+  padding-left: 40px;
+}
+.score_board{
+display: grid;
+grid-template-columns: auto auto;
+grid-template-rows: auto auto;
+grid-gap: 3px;
+width: 200px;
+background-color: black;
 }
 .score_board > div{
-  background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    height: 50px;
-    width: 100px;
-    font-size: large;
+background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  font-size: large;
 
 }
 .x::before {
-  content: 'x';
+content: 'x';
 
-  font-size: 200px;
+font-size: 200px;
 }
 
 .o::before {
- content :'o';
- font-size: 200px;
+content :'o';
+font-size: 200px;
 }

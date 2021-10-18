@@ -5,7 +5,7 @@ var current="x";
 var start=1;
 
 
-function fill(control){
+function fill(control){   //to fill our board
     player();
     if(count<=9){
         if(control.innerHTML == ""){
@@ -14,23 +14,23 @@ function fill(control){
             changep();
             if(checkWin()){ //Conditions to find our winner
                 if(control.innerHTML === "x"){
-                   alert("player 1 won");
+                  play = "Player 1";
+                  document.getElementById("win").innerHTML = play  +  " has won!!";
                     score1();
                     count=10;
-                    reset();
                     return control;
                 }
                 else(control.innerHTML === "o") 
                 {
-                    alert("player 2 won");
+                    play = "Player 2";
+                  document.getElementById("win").innerHTML = play  +  " has won!!";
                     score2();
                     count=10;
-                    reset();
                     return control;
                 }
             }
 
-            if(count==10){
+            if(count==10){   //to show it's a tie
                 alert("It's a Tie");
                 reset();
                 return control;
@@ -40,12 +40,13 @@ function fill(control){
 
     }
 
-    }
-    function changep(){ 
+}
+
+    function changep(){    //to change the players
         current = (current == "x") ? "o" : "x";
     }
 
-function player(){ 
+function player(){ //to manage the turns 
     if(start % 2 !== 0){
          currentPlayer = "Player 1";
         start++;
@@ -57,7 +58,7 @@ function player(){
     document.getElementById("t1").innerHTML = currentPlayer + "'s turn!!";
 }
 
-function getdata(get)
+function getdata(get)  //to get data
 { 
  return document.getElementById(get).innerHTML;
  }
@@ -80,7 +81,7 @@ function checkWin()
 }
 
 
-function score1(){
+function score1(){ //update the scoreboard
     document.getElementById('p1').innerHTML = sp1 + 1;
      sp1++;
 }
@@ -89,29 +90,36 @@ function score2(){
      sp2++;
 }
 
-function reset(){
+
+function reset(){ //reset button
     for (let i = 1; i <= 9; i++)
      {
         document.getElementById("cell" + i).innerHTML="";
     } 
     document.getElementById('t1').innerHTML="";
+    document.getElementById('win').innerHTML="";
     count=1;
+    currentPlayer= "player1"
+    current= "x";
 }
-
-function reset1()
+ 
+function reset1() //start button
 {
     for(let i=1; i<=9; i++){
         document.getElementById('cell' +i ).innerHTML="";
         document.getElementById('p1').innerHTML="0";
         document.getElementById('p2').innerHTML="0";
         document.getElementById('t1').innerHTML="";
-    } count = 1 ;
+    } 
+    count = 1 ;
 }
 
-function demo() {
-    let n1=document.getElementById("p1").value ;
-    localStorage.setItem("player1",n1);
-    let n2=document.getElementById("p2").value  ;
-    localStorage.setItem("player2",n2);
-}
- 
+function demo(){
+   let n1 = document.getElementById("p1").value;
+    localStorage.setItem("player1","n2");
+   console.log(localStorage.getItem("player1"));
+
+   let n2 = document.getElementById("p2").value ;
+    localStorage.setItem("player2","n2");
+   console.log(localStorage.getItem("player2"));
+   }
